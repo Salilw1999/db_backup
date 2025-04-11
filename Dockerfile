@@ -2,8 +2,8 @@
 FROM mysql:8.0
 
 # Set environment variables
-ENV MYSQL_ROOT_PASSWORD=iam@123
-ENV MYSQL_DATABASE=smartz5q_erp_live
+ENV MYSQL_ROOT_PASSWORD=salil
+ENV MYSQL_DATABASE=salil
 
 # Create target directory
 RUN mkdir -p /var/opt/
