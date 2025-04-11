@@ -3,12 +3,12 @@ version: '3.8'
 services:
   mysql:
     build: .
-    container_name: smartz5q_db
+    container_name: salil
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: iam@123
-      MYSQL_DATABASE: smartz5q_erp_live
+      MYSQL_ROOT_PASSWORD: salil
+      MYSQL_DATABASE: salil
     volumes:
       - ./backup.sql:/var/opt/backup.sql
       - ./restore_db.sh:/usr/local/bin/restore_db.sh
