@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mysql:
+    build: .
+    container_name: smartz5q_db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: iam@123
+      MYSQL_DATABASE: smartz5q_erp_live
+    volumes:
+      - ./backup.sql:/var/opt/backup.sql
+      - ./restore_db.sh:/usr/local/bin/restore_db.sh
+    entrypoint: ["sh", "-c", "/usr/local/bin/restore_db.sh && docker-entrypoint.sh mysqld"]
